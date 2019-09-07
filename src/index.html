@@ -45,7 +45,9 @@
       <h4>Shorten a URL</h4>
       <form id="shorten">
         <div>
-          <label for="shorten-url">Long URL to shorten</label>
+          <div>
+            <label for="shorten-url">Long URL to shorten</label>
+          </div>
           <input
             id="shorten-url"
             type="url"
@@ -59,7 +61,9 @@
           </button>
         </div>
         <div>
-          <label for="shorten-result">Result</label>
+          <div>
+            <label for="shorten-result">Result</label>
+          </div>
           <input readonly id="shorten-result" type="url" placeholder="Shortened URL" />
           <button id="copy" type="button" disabled>
             Copy
@@ -68,7 +72,9 @@
       </form>
       <h4>Get URL usage stats</h4>
       <form id="stats">
-        <label for="stats-url">Long URL to get stats for</label>
+        <div>
+          <label for="stats-url">Long URL to get stats for</label>
+        </div>
         <div>
           <input
             id="stats-url"
