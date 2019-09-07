@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- CSS and formatting -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/styles/style.scss" />
+    <!-- SEO meta tags -->
+    <title>Zero Width Shortener</title>
+    <meta name="twitter:title" content="Zero Width Shortener" />
+    <meta name="og:site_name" content="Zero Width Shortener" />
+    <meta property="og:title" content="Zero Width Shortener" />
+
+    <meta property="og:url" content="https://zws.im/" />
+    <link rel="canonical" href="https://zws.im/" />
+
+    <meta name="language" content="EN" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="description" content="Shorten URLs using invisible spaces." />
+    <meta name="twitter:description" content="Shorten URLs using invisible spaces." />
+    <meta property="og:description" content="Shorten URLs using invisible spaces." />
+
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary" />
+
+    <meta name="theme-color" content="#FFF" />
+
+    <meta name="keywords" content="zero, width, shortener, url, url shortener, zero-width, zws" />
+
+    <link rel="icon" href="./assets/image/logo-512.png" />
+    <link rel="apple-touch-icon" href="./assets/image/logo-192.png" />
+
+    <link rel="manifest" href="./manifest.webmanifest" />
+  </head>
+
+  <body>
+    <header>
+      <section>
+        <h1>Zero Width Shortener</h1>
+        <h3>Shorten URLs using invisible spaces.</h3>
+      </section>
+    </header>
+    <main>
+      <h4>Shorten a URL</h4>
+      <form id="shorten">
+        <div>
+          <label for="shorten-url">Long URL to shorten</label>
+          <input
+            id="shorten-url"
+            type="url"
+            maxlength="500"
+            minlength="1"
+            required
+            placeholder="Long URL (max 500 characters)"
+          />
+          <button id="shorten-submit" type="submit">
+            Shorten
+          </button>
+        </div>
+        <div>
+          <label for="shorten-result">Result</label>
+          <input readonly id="shorten-result" type="url" placeholder="Shortened URL" />
+          <button id="copy" type="button" disabled>
+            Copy
+          </button>
+        </div>
+      </form>
+      <h4>Get URL usage stats</h4>
+      <form id="stats">
+        <label for="stats-url">Long URL to get stats for</label>
+        <div>
+          <input
+            id="stats-url"
+            type="url"
+            maxlength="500"
+            minlength="1"
+            required
+            placeholder="Long URL (max 500 characters)"
+          />
+          <button id="stats-submit" type="submit">
+            Check
+          </button>
+        </div>
+        <div><p id="stats-result"></p></div>
+      </form>
+    </main>
+
+    <script src="assets/ts/index.ts"></script>
+  </body>
+</html>

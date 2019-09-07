@@ -1,0 +1,45 @@
+{
+  "author": "Jonah Snider <me@jonahsnider.ninja> (jonahsnider.ninja)",
+  "browserslist": [
+    "last 25 Chrome versions"
+  ],
+  "bugs": {
+    "url": "https://github.com/zws-im/tiny-website/issues"
+  },
+  "devDependencies": {
+    "@dice-discord/eslint-config": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "parcel": "^1.12.3",
+    "prettier": "^1.18.2",
+    "sass": "^1.22.10",
+    "typescript": "^3.6.2"
+  },
+  "keywords": [
+    "url shortener",
+    "url",
+    "shortener",
+    "zero width space"
+  ],
+  "license": "Apache-2.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zws-im/tiny-website.git"
+  },
+  "scripts": {
+    "build": "rm -rf dist; parcel build src/*.html",
+    "build:tiny": "rm -rf dist; parcel build --experimental-scope-hoisting --detailed-report 100 src/*.html",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --check \"./**/*.{{j,t}{s,sx},flow,{{sc,c},le}ss,json,md,{y,ya}ml,html}\"",
+    "prettier:fix": "prettier --check --write \"./**/*.{{j,t}{s,sx},flow,{[s]c,le}ss,json,md,{y,ya}ml,html}\"",
+    "serve": "parcel serve src/*.html --no-autoinstall",
+    "watch": "parcel watch src/*.html --no-autoinstall"
+  },
+  "version": "1.0.0"
+}
