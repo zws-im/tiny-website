@@ -25,6 +25,7 @@
     "shortener",
     "zero width space"
   ],
+  "homepage": "https://tiny.zws.im",
   "license": "Apache-2.0",
   "private": true,
   "repository": {
@@ -41,5 +42,5 @@
     "serve": "parcel serve src/*.html --no-autoinstall",
     "watch": "parcel watch src/*.html --no-autoinstall"
   },
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
