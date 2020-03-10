@@ -8,28 +8,29 @@ export const apiURL = "https://us-central1-zero-width-shortener.cloudfunctions.n
  */
 export const hostnames = ["zws.im", "zws.jonahsnider.ninja", "zerowidthshortener.netlify.com"];
 
-// We do this to have avoid having "document.getElementById" a lot, since Parcel will rename this variable to something short
-const doc = document;
+// We do this to have avoid having "document.getElementById" a lot, since Parcel will mangle this variable to something short
+
+const getByID = id => document.getElementById(id);
 
 /**
  * HTML elements used across the project.
  */
 export const elements = {
   submitButtons: {
-    shorten: doc.getElementById("shorten-submit") as HTMLButtonElement,
-    stats: doc.getElementById("stats-submit") as HTMLButtonElement
+    shorten: getByID("shorten-submit") as HTMLButtonElement,
+    stats: getByID("stats-submit") as HTMLButtonElement
   },
   inputs: {
-    shorten: doc.getElementById("shorten-url") as HTMLInputElement,
-    stats: doc.getElementById("stats-url") as HTMLInputElement
+    shorten: getByID("shorten-url") as HTMLInputElement,
+    stats: getByID("stats-url") as HTMLInputElement
   },
   outputs: {
-    shorten: doc.getElementById("shorten-result") as HTMLInputElement,
-    stats: doc.getElementById("stats-result") as HTMLParagraphElement
+    shorten: getByID("shorten-result") as HTMLInputElement,
+    stats: getByID("stats-result") as HTMLParagraphElement
   },
   forms: {
-    shorten: doc.getElementById("shorten") as HTMLFormElement,
-    stats: doc.getElementById("stats") as HTMLFormElement
+    shorten: getByID("shorten") as HTMLFormElement,
+    stats: getByID("stats") as HTMLFormElement
   },
-  copyButton: doc.getElementById("copy") as HTMLButtonElement
+  copyButton: getByID("copy") as HTMLButtonElement
 };

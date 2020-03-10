@@ -7,7 +7,7 @@ export default (urlString: string) => {
     new URL(urlString);
 
     return true;
-  } catch (error) {
+  } catch {
     return false;
   }
 };
